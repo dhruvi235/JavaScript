@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>palindrome or not</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var n=parseInt(prompt("Enter Value : "))
+		sum=0
+		temp=n
+		while(temp>0)
+		{
+			let rem=temp%10
+			sum=sum*10+rem
+			temp=parseInt(temp/10)
+		}
+		if(n==sum)
+		{
+			alert("Number is palindrome")
+		}
+		else
+		{
+			alert("Number is Not palindrome")
+		}
+	</script>
+
+</body>
+</html>

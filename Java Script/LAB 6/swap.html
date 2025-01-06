@@ -1,0 +1,28 @@
+//17. WAP to swap values of 2 variables without using 3rd variable. (B) 
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Swap</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var a=10;
+		var b=20;
+		console.log("Before Swap:");
+		console.log(a);
+		console.log(b);
+		// a=a+b;
+		// b=a-b;
+		// a=a-b;
+		// console.log("After Swap:");
+		// console.log(a);
+		// console.log(b);
+		a=a^b;
+		b=a^b;
+		a=a^b;
+		console.log("After Swap:");
+		console.log(a);
+		console.log(b);
+	</script>
+</body>
+</html>

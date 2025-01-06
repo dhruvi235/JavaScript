@@ -1,0 +1,56 @@
+<!-- 16. WAP to display result of a student whether he/she pass or fail the exam. (Criteria is 
+>39 marks is all 5 subjects.) Also display the grade of the student. (Criteria >90 then 
+grade „A‟, >80 then „B‟, >70 then „C‟, >60 then „D‟, >40 then „E‟, <40 then „F‟).(B) -->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Result</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var Per=82;
+		var grade;
+		var Result;
+
+		// if (Per>39) {
+		// 	Result="Pass";
+		// 	alert(Result);
+		// 	alert(grade);
+		// }
+		if (Per<40) {
+			Result="Fail";
+			alert(Result);
+		}
+		else if (Per>=40 && Per<60) {
+			Result="Pass";
+			grade="E";
+			alert(Result);
+			alert(grade);
+		}
+		else if (Per>=60 && Per<70) {
+			Result="Pass";
+			grade="D";
+			alert(Result);
+			alert(grade);
+		}
+		else if (Per>=70 && Per<80) {
+			Result="Pass";
+			grade="C";
+			alert(Result);
+			alert(grade);
+		}
+		else if (Per>=80 && Per<90) {
+			Result="Pass";
+			grade="B";
+			alert(Result);
+			alert(grade);
+		}
+		else if (Per>=90) {
+			Result="Pass";
+			grade="A";
+			alert(Result);
+			alert(grade);
+		}
+	</script>
+</body>
+</html>

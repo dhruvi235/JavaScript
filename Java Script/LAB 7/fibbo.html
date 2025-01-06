@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Fibbonacci Series</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var n=prompt("Enter Value:")
+		var a=0
+		var b=1
+		var temp
+		var i=2
+		// alert(a)
+		// alert(b)
+		while(i<=n)
+		{
+			temp=a+b
+			alert(temp)
+			a=b
+			b=temp
+			i++
+		}
+	</script>
+</body>
+</html>
+<!-- int n, i, flag = 1; 
+printf("Enter a number: "); 
+scanf("%d", &n); 
+if (n <= 1) { flag = 0; } 
+else { 
+for (i = 2; i <= n / 2; i++) { 
+if (n % i == 0) { 
+flag = 0; break; } } } 
+if (flag == 1) { 
+printf("%d is a prime number.\n", n); 
+} else { printf("%d is not a prime number.\n", n); } return 0 -->

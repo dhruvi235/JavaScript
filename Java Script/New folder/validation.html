@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Validation Format</title>
+</head>
+<body>
+    <form action="">
+     <table>
+        <tr>
+        <td><label for="name">Enter Name</label></td>
+        <td><input type="text" id="name" name="name"></td>
+        </tr>
+        <tr>
+        <td><label for="email">Enter Email</label></td>
+        <td><input type="email" id="email" name="email"></td>
+        </tr>
+        <tr>
+        <td><label for="phone">Enter Phone No.</label></td>
+        <td><input type="number" id="phone" name="phone"></td>
+        </tr>
+        <tr>
+        <td><label for="dob">Enter DOB</label></td>
+        <td><input type="date" id="dob" name="dob"></td>
+        </tr>
+        <tr>
+        <td><button onclick="validation()">Submit</button></td>
+        </tr>
+    </table>
+    </form> 
+    <script>
+        const dobfiled=document.getElementById("dob");
+        const today=new Date().toISOString().split("T")[0];
+        dobfiled.max=today;
+        //WAP to implement data format validations
+         function validation(){
+            const name=document.getElementById("name").value;
+            const email=document.getElementById("email").value;
+            const phone=document.getElementById("phone").value;
+            const dob=document.getElementById("dob").value;
+
+            const username=/^[a-zA-Z]{3,}$/;
+            const emailvalid=/^\w+([\.-]?\w+)*@\w+([\.]?\w+)*(\.\w{2,3})+$/;
+            const phonevalid=/^[0-9]{10}$/;
+            if(name=="")
+             {
+                alert("Please Enter your name");
+                return flase;
+             }
+            if(!username.test(name))
+             {
+                alert("Invalid Name");
+                return false;
+             }
+            if(!emailvalid.test(email))
+             {
+                alert("Invalid Email");
+                return false;
+             }
+            if(!phonevalid.test(phone))
+             {
+                alert("Invalid Phone");
+                return false;
+             }
+            if(dob==="")
+             {
+                alert("Please Enter your date of birth");
+                return false;
+             }
+            alert("Register successfully");
+            return true;
+            }
+    </script>
+</body>
+</html>

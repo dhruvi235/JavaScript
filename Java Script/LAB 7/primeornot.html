@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Prime Or Not</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var n=prompt("Enter Value :")
+		// var a
+		// var i=2
+		// var flag=1
+		// if(n<=1)
+		// {
+		// 	flag=0
+		// }
+		// else
+		// {
+		// 	for(i=2;i<=n/2;i++)
+		// 	{
+		// 		if(n%i==0)
+		// 		{
+		// 			flag=0
+		// 			break
+		// 		}
+		// 	}
+		// 		if(flag==1)
+		// 		{
+		// 			alert("Number is Prime");
+		// 		}
+		// 		else
+		// 		{
+		// 			alert("Number is Not Prime")
+		// 		}
+		// 	}
+
+	var flag=0,i=2
+	  if (n==2) 
+	  {
+        alert("Number is Prime")
+      }
+      else if(n<2)
+      {
+      	alert("Number is Invalid to check!!")
+      }
+     else
+      {
+        while (i < n)
+         {
+            if (n % i == 0) 
+            {
+                flag = 1;
+                break;
+            }
+            i++;
+        }
+    if(flag==0)
+    {
+    	alert("Number is Prime")
+    }
+    else
+    {
+    	alert("Number is Not Prime")
+    }
+    }
+	</script>
+
+</body>
+</html>

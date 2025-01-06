@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>prime</title>
+</head>
+            
+<body>
+    <script>
+        var a = parseInt(prompt("enter starting number:"))
+        var b = parseInt(prompt("enter ending number:"))
+        for (var c = a; c <= b; c++) {
+            isPrime = 0
+            for (var i = 2; i < a; i++) {
+                if (c % i == 0) {
+                    isPrime = 1
+                    break;
+                }
+                if (isPrime == 0) {
+                    console.log(c)
+                }
+            }
+        }
+    </script>
+</body>
+</html>

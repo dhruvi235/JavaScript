@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UDF demo</title>
+</head>
+<script>
+    function myfunction(p1,p2)
+    {
+        return p1*p2;
+    }
+
+    let result = myfunction(3,4);
+    console.log(result);
+
+    var a=prompt("Enter first value: ");
+    var b=prompt("Enter second value: ");
+    result=myfunction(a,b);
+    document.write(result);
+    print("<br>");
+
+</script>
+
+<script>
+
+    var a=confirm("Are you sure???");
+    if(a==true){
+        console.log("User accepted");
+    }
+    else{
+        console.log("User cancelled");
+    }
+</script>
+
+<script>
+
+    function toCelcius(f)
+    {
+        return (f-32)*(5/9);
+    }
+
+    let value=prompt("Enter Value:");
+    print("<br>");
+    document.write(toCelcius(value));
+</script>
+<body>
+    
+</body>
+</html>

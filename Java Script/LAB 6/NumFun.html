@@ -1,0 +1,34 @@
+//13. WAP to demonstrate number handling functions of javascript. (A)
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Number Handling Function : </title>
+</head>
+<body>
+	<script type="text/javascript">
+		let num=5.36789;
+
+		let n=num.toFixed();
+		console.log(n);//5
+
+		n=num.toPrecision(3);
+		console.log(n);//5.37
+
+		n=num.toExponential();
+		console.log(n);//5.36789e+0
+
+		let x=10;
+		let z=x**3;
+		console.log(z);//1000
+
+		x=5;
+		y=3;
+		z=Math.pow(x,y);
+		console.log(z);//125
+
+		x=5;
+		x**=2;
+		console.log(x);//25
+	</script>
+</body>
+</html>

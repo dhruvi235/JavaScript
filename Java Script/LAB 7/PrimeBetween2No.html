@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Prime Between Two Number</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var n1=parseInt(prompt("Enter Starting Number:"))
+		var n2=parseInt(prompt("Enter Ending Number:"))
+		var flag=0,i=2,a
+	        while (n1 < n2)
+	         {
+	            if (a % i == 0) 
+	            {
+	                flag = 1;
+	                break;
+	            }
+	           	i++;
+	        }
+			    if(flag==0)
+			   	{
+			    	alert("Number is Prime")
+			    }
+			    else
+			    {
+			    	alert("Number is Not Prime")
+			    }
+	</script>
+</body>
+</html>
