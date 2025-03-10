@@ -1,15 +1,8 @@
-<script type="text/javascript">
-	
-	let numbers = [10, 25, 35, 50, 55, 70, 85, 100];
-
-	let numbersGreaterThan50 = numbers.filter(greater);
-
-	function greater(number) 
-	{
-    return number > 50;
-	}
-
-document.write("Numbers greater than 50: ","<br>", numbersGreaterThan50);
-
-
+<script>
+    const numbers = [12,23,10,79,76,43,90];
+    document.write("Age above 50:"+"<br>")
+    document.write(numbers.filter(checkNumber));
+    function checkNumber(num){
+        return num>=50
+    }
 </script>
