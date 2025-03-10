@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Maxmimum & Minimum Number</title>
+</head>
+<body>
+	<script type="text/javascript">
+		let a=[];
+       
+        let n=prompt("Enter Size of Array : ");
+        for(let i=0;i<n;i++){
+            let num=prompt("Enter element:");
+            a[i]=num;
+        }
+        max=a[0];
+        min=a[0];
+        for(let i=0;i<a.length;i++)
+        {
+            if(max<a[i])
+                max=a[i];
+            else if(min>a[i])
+                min=a[i];
+        }
+        document.write(max,"<br>",min);
+	</script>
+</body>
+</html>

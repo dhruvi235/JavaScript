@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function var_let() {
+            if (true) {
+                var x = 16;
+                let y = 13;
+            }
+            document.write(x + "<br>");
+            //document.write(y); error!!
+            x = 7;
+            document.write(x + "<br>");
+            let y = 13;
+            document.write(y);
+        }
+        var_let();
+    </script>
+</body>
+
+</html>

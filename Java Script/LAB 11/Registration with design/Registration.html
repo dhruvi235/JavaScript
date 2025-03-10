@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Registartion Form</title>
+    <style type="text/css">
+        .form{
+            background-color: lightpink;
+            width: 16%;
+        }
+    </style>
+</head>
+<body>
+    <div class="form" style="display: flex; align-items: center;margin-left: 30%;margin-top: 200px;">
+	<form action="" name="form" onsubmit="return validation()">
+     <table border="1">
+        <h3 align="center">Student Registration Form</h3>
+        <tr>
+        <td><label for="fullname">Enter FullName</label></td>
+        <td><input type="text" id="fullname" name="fullname"></td>
+        </tr>
+        <tr>
+        <td><label for="email">Enter Email</label></td>
+        <td><input type="email" id="email" name="email"></td>
+        </tr>
+        <tr>
+        <td><label for="phone">Enter Phone No.</label></td>
+        <td><input type="number" id="phone" name="phone"></td>
+        </tr>
+        <tr>
+        <td><label for="dob">Enter DOB</label></td>
+        <td><input type="date" id="dob" name="dob"></td>
+        </tr>
+        <tr>
+        <td><label for="address">Address</label></td>
+        <td><textarea id="address"></textarea></td>
+        </tr>
+        <tr>
+        	<td><label for="Gender">Select Gender</label></td>
+        	<td><input type="radio" name="Gender" id="gender1" value="Male" style="color: black">Male
+        	<input type="radio" name="Gender" id="gender2" value="Female">Female</td>
+        </tr>
+        <tr>
+        	<td><label for="City">City</label></td>
+        	<td><select name="drpcity" id=city>
+        			<option selected disabled="">Select Your City</option>
+        			<option>Rajkot</option>
+        			<option>Morbi</option>
+        			<option>Ahmedabad</option>
+        		</select></td>
+        </tr>
+        <tr>
+            <td><label for="nationality">Nationality</label></td>
+            <td><input type="text" name="nationality" id="nationality"></td>
+        </tr>
+        <tr>
+            <td><label for="degree">Degree</label></td>
+            <td><select id="degree">
+                <option selected disabled="">Select Your degree</option>
+                <option>CBSE Completed</option>
+                <option>HSC Completed</option>
+                <option>Under Graduate</option>
+                <option>Post Graduate</option>
+                <option>PHD</option></select></td>
+        </tr>
+        <tr>
+        <td colspan="2"><input type="Submit" name="Submit" id="Submit"></td>
+        </tr>
+    </div>
+    </table>
+    </form>
+
+     <script>
+        const dobfiled=document.getElementById("dob");
+        const today=new Date().toISOString().split("T")[0];
+        dobfiled.max=today;
+        //WAP to prepare student registration form and validate it using JavaScript
+         function validation(){
+            const fullname=document.getElementById("fullname").value;
+            const email=document.getElementById("email").value;
+            const phone=document.getElementById("phone").value;
+            const dob=document.getElementById("dob").value;
+            const address=document.getElementById("address").value;
+            const gender1=document.getElementById("gender1").checked;
+            const gender2=document.getElementById("gender2").checked;
+            const city=document.getElementById("city").value;
+            const nationality=document.getElementById("nationality").value;
+            const degree=document.getElementById("degree").value;
+
+            const username=/^[a-zA-Z]{3,}$/;
+            const emailvalid=/^\w+([\.-]?\w+)*@\w+([\.]?\w+)*(\.\w{2,3})+$/;
+            const phonevalid=/^[0-9]{10}$/;
+            if(fullname=="")
+             {
+                alert("Please Enter your name");
+                document.form.fullname.focus();
+                return flase;
+             }
+            if(!username.test(fullname))
+             {
+                alert("Invalid Name");
+                document.form.fullname.focus();
+                return false;
+             }
+            if(!emailvalid.test(email))
+             {
+                alert("Invalid Email");
+                document.form.email.focus();
+                return false;
+             }
+            if(!phonevalid.test(phone))
+             {
+                alert("Invalid Phone");
+                document.form.phone.focus();
+                return false;
+             }
+            if(dob=="")
+             {
+                alert("Please Enter your date of birth");
+                document.form.dob.focus();
+                return false;
+             }
+             if(address=="")
+             {
+             	alert("Please Enter your address");
+                document.form.address.focus();
+             	return false;
+             }
+             if(!gender1 && !gender2)
+             {
+             	alert("Please Enter your Gender");
+                document.form.gender1.focus();
+                document.form.gender2.focus();
+             	return false;
+             }
+             if(city=="" || city=="Select Your City")
+             {
+             	alert("Please Enter your city")
+                document.form.city.focus();
+             	return false;
+             }
+             if(nationality=="")
+             {
+                alert("Please Enter your nationality")
+                document.form.nationality.focus();
+                return false;
+             }
+             if(degree=="" || degree=="Select Your degree")
+             {
+                alert("Please Enter your degree")
+                document.form.degree.focus();
+                return false;
+             }
+            alert("Register successfully");
+            return true;
+            }
+    </script> 
+</body>
+</html>

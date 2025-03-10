@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		var colors=["red","green","blue","lightpink","lightblue","aqua"];
+		var currentIndex=0
+
+		function changeColor() {
+			var first = document.getElementById('d');
+			currentIndex=(currentIndex+1)%colors.length;
+			first.style.color=colors[currentIndex];
+		}
+		function changeSize() {
+			d.style.fontSize= '32px';
+		}
+		function changeBgColor() {
+			var first = document.getElementById('d');
+			currentIndex=(currentIndex+1)%colors.length;
+			first.style.backgroundColor=colors[currentIndex];
+		}
+	</script>
+	<div id="d">Welcome To Darshan University..</div>
+	<button onclick="changeColor()">Font Color</button>
+	<button onclick="changeSize()">Font Size</button>
+	<button onclick="changeBgColor()">Background Color</button>
+</body>
+</html>

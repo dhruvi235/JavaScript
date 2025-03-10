@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Date and Time</title>
+    <script>
+        function displayDateTime() {
+            // Create a new Date object to get the current date and time
+            var currentDate = new Date();
+            
+            // Format the date and time to a readable string
+            var dateTimeString = "Date: " + currentDate.toDateString() + "<br>" +
+                                 "Time: " + currentDate.toLocaleTimeString();
+
+            // Display the date and time in the 'dateTime' element
+            // The formatted date and time are displayed inside the div by setting its innerHTML.
+            document.getElementById("dateTime").innerHTML = dateTimeString;
+        }
+    </script>
+</head>
+<body>
+    <h2>Click the button to display the current date and time:</h2>
+
+    <!-- Button to trigger the displayDateTime() function -->
+    <button onclick="displayDateTime()">Date and Time</button><br><br>
+
+    <!-- Div to show the current date and time -->
+    <div id="dateTime"></div>
+</body>
+</html>
+

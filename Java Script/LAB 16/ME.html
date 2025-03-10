@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse Event Recognizer</title>
+</head>
+<body>
+    <button id="eventButton">Hover or Click Me</button>
+    <div id="eventInfo">Event: None</div>
+
+    <script>
+        const eventButton = document.getElementById("eventButton");
+        const eventInfo = document.getElementById("eventInfo");
+
+        function showEventInfo(event) {
+            eventInfo.textContent = `Event: ${event.type}`;
+        }
+
+        eventButton.addEventListener("click", showEventInfo);
+        eventButton.addEventListener("mouseover", showEventInfo);
+        eventButton.addEventListener("mouseout", showEventInfo);
+        eventButton.addEventListener("mousedown", showEventInfo);
+        eventButton.addEventListener("mouseup", showEventInfo);
+    </script>
+</body>
+</html>

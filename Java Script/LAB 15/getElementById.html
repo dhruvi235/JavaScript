@@ -1,0 +1,25 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>getElementById() Example</title>
+     <style type="text/css">
+        p{
+            color: rgb();
+        }
+    </style>
+    <script>
+        function changeText() {
+            var element = document.getElementById("demoid");
+            element.innerHTML = "Hello, JavaScript is awesome!";
+        }
+    </script>
+</head>
+<body>
+    <h2>Click the button to change the text:</h2>
+    <p id="demoid">This is a placeholder text.</p>
+    <button onclick="changeText()">Click me</button>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Serch Value function search and function will return the index position</title>
+</head>
+<body>
+	<script type="text/javascript">
+		let a=['D','h','r','u','v','i'];
+		function search(argument) {
+			var x = prompt("Enter Element");
+			for(let i=0;i<a.length;i++)
+			{
+				if(a[i]==x)
+				{
+					document.write(i);
+					break;
+				}
+				else
+				{
+					document.write("Element Not Found");
+				}
+			}
+		}
+		search();
+
+        // let s1=a.indexOf("h");
+        // let s2=a.lastIndexOf("a");
+        // document.write(s1,'<br>');
+        // document.write(s2);
+	</script>
+</body>
+</html>

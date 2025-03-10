@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>DHTML Example</title>
+	<style type="text/css">
+	#myDiv{
+		height: 70px;
+		width: 70px;
+		background-color: violet;
+	}
+	</style>
+</head>
+<body>
+	<script type="text/javascript">
+	var colors=["red","green","blue","purple","pink","aqua"];
+	var currentindex=0;
+
+	function changecolor() {
+		var myDiv = document.getElementById("myDiv");
+		currentindex=(currentindex+1)%colors.length;
+		myDiv.style.backgroundColor = colors[currentindex];
+	}
+	</script>
+	<div id="myDiv"></div>
+	<button onclick="changecolor()">Click For Change color</button>
+</body>
+</html>

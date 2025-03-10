@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>getElementsByTagName() Example</title>
+    <style type="text/css">
+        p{
+            color: purple;
+        }
+    </style>
+    <script>
+        function changeText() {
+
+            var paragraphs = document.getElementsByTagName("p");
+
+            for (var i = 0; i < paragraphs.length; i++) {
+                paragraphs[i].innerHTML = "This paragraph text has been changed!";
+            }
+        }
+    </script>
+</head>
+<body>
+    <h2>Click the button to change the text of all paragraphs:</h2>
+    <p>This is the first paragraph.</p><br>
+    <button onclick="changeText()">Change Text</button>
+</body>
+</html>

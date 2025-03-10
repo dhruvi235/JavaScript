@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Prime Or Not</title>
+</head>
+<body>
+	<script type="text/javascript">
+		let ans = (a) =>{
+			var flag=0;
+			for (var i=2;i<=a;i++)
+			{
+				if(a%i==0)
+				{
+					flag==1;
+				}
+				if(flag==0)
+				{
+					document.write("Prime Number");
+				}
+				else
+				{
+					document.write("Not Prime");
+				}
+			}
+		}
+		ans(2);
+	</script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!-- WAP to demonstrate the use of user defined object. -->
+<script type="text/javascript">
+	function student(name,age,grade) {
+		this.name = name;
+		this.age = age;
+		this.grade = grade;
+	this.display=function()
+	{
+		document.write("Student Details : <br>");
+		document.write("Name : " +this.name+ "<br>");
+		document.write("Age : " +this.age+ "<br>");
+		document.write("Grade : " +this.grade+ "<br>");
+	}
+}
+	var s = new student("Dhruvi",18,"A+");
+	s.display();
+
+</script>
